@@ -10,6 +10,7 @@ html {
     --white: #FFFFFF;
     --dark-yellow: #F0B429;
     --grey: #E2E8F0;
+    --black: #000000;
 }
 
 img[src*=svg] {
@@ -37,6 +38,10 @@ body {
     grid-column: 2 / -1;
     grid-row: 1 / 2;
     padding: 1em 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* First Row Header */
@@ -51,6 +56,11 @@ body {
     height: 50%;
     display: flex;
     gap: 15px;
+    flex-shrink: 1;
+}
+
+.profile-container > img[alt*="Green"] {
+    width: 65px;
 }
 
 .search-bar {
@@ -66,6 +76,7 @@ body {
     align-items: center;
     justify-content: end;
     gap: 20px;
+    flex-shrink: 1;
 }
 
 .profile-container > span {
@@ -77,16 +88,41 @@ body {
 .second-row-header {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+}
+
+.account-detail {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 50%;
+}
+
+.account-name span {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.account-name h2{
+    margin-top: 5px;
+}
+
+.buttons {
+    display: flex;
+    width: 50%;
+    gap: 20px;
+    justify-content: end;
 }
 
 button {
     background-color: var(--button-color);
     border-radius: 10em;
-    padding: 10px 30px;
+    padding: 10px;
+    width: 15%;
     color: white;
     font-weight: bold;
     border: none;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
 }
 
 /* sidebar */
