@@ -28,7 +28,7 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 1fr 4fr 1fr;
     grid-auto-rows: inherit;
 }
 
@@ -128,8 +128,43 @@ button {
 /* sidebar */
 .sidebar {
     background-color: var(--button-color);
+    padding: 1em 3em;
     grid-column: 1 / 2;
     grid-row: 1 / 3;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.logo img[src="media/icon/account-box.svg"] {
+    width: 50px;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg);
+}
+
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar-content img[src*=svg] {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg);
+}
+
+.logo,
+.sidebar-content > div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+}
+
+.sidebar-content a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.3rem;
 }
 
 /* article */
